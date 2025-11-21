@@ -21,14 +21,14 @@
     background: #000 url("bg.png?v=5") center center / cover no-repeat fixed;
   }
 
-  h1 { font-size: 2em; margin-top: 40px; }
+  h1 { font-size: 2em; margin-top: 20px; }
   p { color: #ccc; margin: 10px 0 30px; }
 
   .link {
     display: flex; 
     align-items: center; 
     justify-content: center;
-    gap: 12px; 
+    gap: 12px;
     width: 90%; 
     max-width: 380px;
     margin: 12px 0; 
@@ -50,9 +50,7 @@
     border-radius: 6px;
   }
 
-  footer { margin-top: auto; padding: 30px 0; opacity: .8; }
-
-  /* === SLIDE-DOWN EMAIL WIDGET === */
+  /* === EMAIL WIDGET === */
   #email-widget {
     width: 90%;
     max-width: 380px;
@@ -117,6 +115,21 @@
     transition: opacity 0.3s ease;
   }
 
+  /* Animated footer quote */
+  footer.footer-quote {
+    margin-top: auto;
+    padding: 30px 0;
+    font-size: 0.9em;
+    opacity: 0.85;
+    animation: fadeGlow 4s ease-in-out infinite;
+  }
+
+  @keyframes fadeGlow {
+    0%   { opacity: 0.7; text-shadow: 0 0 0px rgba(255,255,255,0.3); }
+    50%  { opacity: 1;   text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+    100% { opacity: 0.7; text-shadow: 0 0 0px rgba(255,255,255,0.3); }
+  }
+
 </style>
 </head>
 <body>
@@ -131,7 +144,7 @@
     LinkedIn Profile
   </a>
 
-  <!-- Email Button -->
+ <!-- Email Button -->
   <div class="link" onclick="toggleEmailWidget()" id="email-btn">
     <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg"
          style="filter: invert(100%);">
@@ -148,7 +161,7 @@
   <!-- Copied bubble -->
   <div id="copied-bubble">Copied!</div>
 
-  <footer>La volonté construit l’avenir.</footer>
+  <footer class="footer-quote">« La volonté construit l’avenir. »</footer>
 
 <script>
 function toggleEmailWidget() {
@@ -162,7 +175,7 @@ function copyEmail() {
   const bubble = document.getElementById("copied-bubble");
   bubble.style.opacity = 1;
 
-  setTimeout(() => {
+  setTimeout(() => { 
     bubble.style.opacity = 0;
   }, 1500);
 }
@@ -170,4 +183,3 @@ function copyEmail() {
 
 </body>
 </html>
-
