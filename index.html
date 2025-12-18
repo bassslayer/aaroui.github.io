@@ -45,8 +45,8 @@
   }
 
   .icon {
-    width: 30px; 
-    height: 30px;
+    width: 28px; 
+    height: 28px;
     border-radius: 6px;
   }
 
@@ -142,21 +142,24 @@
     LinkedIn Profile
   </a>
 
-  <!-- Download CV -->
-  <a class="link" href="Aaroui Mouad cv.pdf" download>
-    <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobeacrobatreader.svg"
+  <!-- CV -->
+  <a class="link"
+     href="https://raw.githubusercontent.com/bassslayer/aaroui.github.io/main/Aaroui%20Mouad%20cv.pdf"
+     download>
+    <img class="icon"
+         src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg"
          style="filter: invert(100%);">
-    Download CV
+    CV
   </a>
 
   <!-- Email Button -->
-  <div class="link" onclick="toggleEmailWidget()" id="email-btn">
+  <div class="link" onclick="toggleEmailWidget()">
     <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg"
          style="filter: invert(100%);">
     Email Me
   </div>
 
-  <!-- Slide-down Email Widget -->
+  <!-- Email Widget -->
   <div id="email-widget">
     <div class="email-line">mouadaaroui.job@gmail.com</div>
     <button class="copy-btn" onclick="copyEmail()">Copy</button>
@@ -177,7 +180,7 @@ function copyEmail() {
   navigator.clipboard.writeText("mouadaaroui.job@gmail.com");
   const bubble = document.getElementById("copied-bubble");
   bubble.style.opacity = 1;
-  setTimeout(() => { bubble.style.opacity = 0; }, 1500);
+  setTimeout(() => bubble.style.opacity = 0, 1500);
 }
 </script>
 
