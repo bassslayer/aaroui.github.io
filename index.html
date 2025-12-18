@@ -100,7 +100,6 @@
     cursor: pointer;
   }
 
-  /* Copied bubble */
   #copied-bubble {
     position: fixed;
     bottom: 40px;
@@ -115,7 +114,6 @@
     transition: opacity 0.3s ease;
   }
 
-  /* Animated footer quote */
   footer.footer-quote {
     margin-top: auto;
     padding: 30px 0;
@@ -129,9 +127,9 @@
     50%  { opacity: 1;   text-shadow: 0 0 8px rgba(255,255,255,0.5); }
     100% { opacity: 0.7; text-shadow: 0 0 0px rgba(255,255,255,0.3); }
   }
-
 </style>
 </head>
+
 <body>
 
   <h1>Mouad Aaroui</h1>
@@ -144,7 +142,14 @@
     LinkedIn Profile
   </a>
 
- <!-- Email Button -->
+  <!-- Download CV -->
+  <a class="link" href="Aaroui Mouad cv.pdf" download>
+    <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobeacrobatreader.svg"
+         style="filter: invert(100%);">
+    Download CV
+  </a>
+
+  <!-- Email Button -->
   <div class="link" onclick="toggleEmailWidget()" id="email-btn">
     <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg"
          style="filter: invert(100%);">
@@ -158,7 +163,6 @@
     <div class="close-small" onclick="toggleEmailWidget()">Close</div>
   </div>
 
-  <!-- Copied bubble -->
   <div id="copied-bubble">Copied!</div>
 
   <footer class="footer-quote">« La volonté construit l’avenir. »</footer>
@@ -171,13 +175,9 @@ function toggleEmailWidget() {
 
 function copyEmail() {
   navigator.clipboard.writeText("mouadaaroui.job@gmail.com");
-
   const bubble = document.getElementById("copied-bubble");
   bubble.style.opacity = 1;
-
-  setTimeout(() => { 
-    bubble.style.opacity = 0;
-  }, 1500);
+  setTimeout(() => { bubble.style.opacity = 0; }, 1500);
 }
 </script>
 
